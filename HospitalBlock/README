@@ -1,6 +1,10 @@
-Documentation: https://www.zastrin.com
+Packages needed
+  npm install ganache-cli web3@0.20.3 solc
+
+Based on: https://www.zastrin.com
 
 How to run it:
+  
   Ganache client must be running:
     node_modules/.bin/ganache-cli
   
