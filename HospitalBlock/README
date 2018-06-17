@@ -1,16 +1,20 @@
+Documentation: https://www.zastrin.com
+
 How to run it:
+  Ganache client must be running:
+    node_modules/.bin/ganache-cli
+  
+  In the node:
+    Web3=require('web3')
+    web3= new Web3(new Web3.providers.HttpProvider("http://localhost:8545"))
+    web3.eth.accounts
 
-In the node:
-Web3=require('web3')
-web3= new Web3(new Web3.providers.HttpProvider("http://localhost:8545"))
-web3.eth.accounts
+    code=fs.readFileSync('patientHospital.sol').toString()
+    solc= require('solc')
+    compileCode=solc.compile(code)
 
-code=fs.readFileSync('patientHospital.sol').toString()
-solc= require('solc')
-compileCode=solc.compile(code)
-
-abiDefinition=JSON.parse(compileCode.contracts[':patientHospital'].interface)
-HospitalContract=web3.eth.contract(abiDefinition)
-byteCode = compileCode.contracts[':patientHospital'].bytecode
-deployedContract = HospitalContract.new({data: byteCode, from: web3.eth.accounts[0], gas: 4700000})
-deployedContract.address
+    abiDefinition=JSON.parse(compileCode.contracts[':patientHospital'].interface)
+    HospitalContract=web3.eth.contract(abiDefinition)
+    byteCode = compileCode.contracts[':patientHospital'].bytecode
+    deployedContract = HospitalContract.new({data: byteCode, from: web3.eth.accounts[0], gas: 4700000})
+    deployedContract.address
