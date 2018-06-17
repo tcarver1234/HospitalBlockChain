@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+<head>
+        <!-- Mobile Specific Meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Author Meta -->
+        <meta name="author" content="Colorlib">
+        <!-- Meta Description -->
+        <meta name="description" content="">
+        <!-- Meta Keyword -->
+        <meta name="keywords" content="">
+        <!-- meta character set -->
+        <meta charset="UTF-8">
+        <!-- Site Title -->
+        <title>For a Better hospital care</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+                <!--
+                CSS
+                ============================================= -->
+                <link rel="stylesheet" href="css/linearicons.css">=
+                <link rel="stylesheet" href="css/font-awesome.min.css">
+                <link rel="stylesheet" href="css/magnific-popup.css">
+                <link rel="stylesheet" href="css/nice-select.css">
+                <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+                <link rel="stylesheet" href="css/bootstrap.css">
+                <link rel="stylesheet" href="css/main.css">
+        </head>
+        <body>
+
+                <!-- Start Header Area -->
+                <header class="default-header">
+                        <div class="container">
+                                <div class="header-wrap">
+                                        <div class="header-top d-flex justify-content-between align-items-center">
+                                                <div class="logo">
+                                                        <a href="#home"><img src="img/logo.png" alt=""></a>
+                                                </div>
+                                                <div class="logo">
+                                                <h1>For a better hospital care.</h1>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </header>
+                <!-- End Header Area -->
+
+
+                
+
+                <!-- Start about Area -->
+                <section class="about-area" id="patient">
+                        <div class="container-fluid">
+                                <div class="row d-flex justify-content-end align-items-center">
+                                        <div class="col-lg-6 col-md-12 about-left no-padding">
+                                                <img class="img-fluid" src="img/about-img.jpg" alt="">
+                                        </div>
+                                        <div class="col-lg-6 col-md-12 about-right no-padding">
+                                                <h1>Look/Add a patient</h1>
+                                                        <form class="booking-form" id="myForm">
+                                                                <div class="row">
+                                                                        <div class="col-lg-12 d-flex flex-column">
+                                                                                <input name="name" id="patientFName" placeholder="Patient first name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Patient first name'" class="form-control mt-20" type="text" required>
+                                                                        </div>
+                                                                        <div class="col-lg-12 d-flex flex-column">
+                                                                                <input name="name" id="patientLName" placeholder="Patient last name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Patient last name'" class="form-control mt-20" type="text" required>
+                                                                        </div>
+                                                                        <div class="col-lg-6 d-flex flex-column">
+                                                                                <input name="insuranceID" id="insuranceID" placeholder="Insurance ID " onfocus="this.placeholder = ''" onblur="this.placeholder = 'insuranceID'" class="form-control mt-20" type="text" required>
+                                                                               <br>
+                                                                        </div>
+                                                                        
+                                                                        <div class="col-lg-12 d-flex send-btn">
+                                                                                <a href="#" onclick="getPatientInfo()" class="btn btn-primary">Load Patient File</a>
+                                                                        
+                                                                        
+                                                                        
+                                                                                <a href="#" onclick="addPatientRecord()" class="btn btn-primary">Enter New Patient </a>
+                                                                        </div>
+                                                                        <div class="col-lg-12"> 
+                                                                        <br>
+                                                                                Please specify a file, or a set of files:<br>
+                                                                                <input type="file" name="datafile" size="40">
+                                                                                <br><br>
+                                                                        </div>
+                                                                        <div class="col-lg-12 d-flex send-btn">
+                                                                                <a href="#" onclick="getPatientFirstName()" class="btn btn-primary">Add File</a>
+                                                                        </div>
+                                                                        <div class="alert-msg"></div>
+                                                                        
+                                                                </div>  
+                                                                
+                                                        </form>
+                                                </div>
+                                        </div>
+                                </div>
+                </section>
+                
+                
+			
+		 <div>
+                        <h1 id="demoHistory"><br></h1>
+                
+                </div>
+               
+                
+                <section class="about-area" id="investigate">
+                        <div class="container-fluid">
+                                <div class="row d-flex justify-content-end align-items-center">
+                                        <div class="col-lg-6 col-md-12 about-left no-padding">
+                                                <img class="img-fluid" src="img/application_digital-health-6-02_16-8184_14072017_600.jpg" alt="">
+                                        </div>
+                                        <div class="col-lg-6 col-md-12 about-right no-padding">
+                                                <h1>Assisting your medical decisions <br></h1>
+                                                <form action="/action_page.php" method="get">
+                                                        <input type="checkbox" name="vehicle" value="D1" checked="checked"> Diabetes<br>
+                                                        <input type="checkbox" name="vehicle" value="D2" > Heart disease<br>
+                                                        <input type="checkbox" name="vehicle" value="D3" > Lung disease<br>
+                                                        <input type="checkbox" name="vehicle" value="D4" > Brain disease<br>
+                                                        <input type="checkbox" name="vehicle" value="D5" > Auto-immune disease<br>
+                                                        <input type="checkbox" name="vehicle" value="D6" > ...<br>
+                                                        
+                                                       
+                                                        <div class="row">
+                                                                <div class="col-lg-6 d-flex flex-column D1 D3 ">
+                                                                        <input name="systole" id="systole" placeholder="systole value" onfocus="this.placeholder = ''" onblur="this.placeholder = 'systole'" class="form-control mt-20" required="" type="text" required>
+                                                                </div>
+                                                                
+                                                                <div class="col-lg-6 d-flex flex-column">
+                                                                        <input name="diastole" id="diastole" placeholder="diastole value" onfocus="this.placeholder = ''" onblur="this.placeholder = 'diastole'" class="form-control mt-20" required="" type="text" required>
+                                                                </div>
+                                                                
+                                                                <div class="col-lg-6 d-flex flex-column">
+                                                                        <input name="Insulin" id="Insulin" placeholder="Insulin value" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Insulin'" class="form-control mt-20" required="" type="text" required>
+                                                                </div>
+                                                                <div class="col-lg-6 d-flex flex-column">
+                                                                        <input name="BMI" id="BMI" placeholder="BMI value" onfocus="this.placeholder = ''" onblur="this.placeholder = 'BMI'" class="form-control mt-20" required="" type="text" required>
+                                                                </div>
+                                                        </div>
+
+
+                                                </form>                
+                                                       
+                                                <div class="col-lg-12 d-flex justify-content-end send-btn">
+                                                        <a href="#" onclick="getPatientFirstName()" class="btn btn-primary">Investigate </a>
+                                                </div>   
+                                        </div>
+                                </div>
+                        </div>
+                </section>
+                <!-- End about Area -->
+                
+               
+
+                <!-- Start fact Area -->
+                <section class="facts-area pt-100 pb-100">
+                        <div class="container">
+                                <div class="row">
+                                        <div class="col-lg-3 col-md-6 single-fact">
+                                                <h2 class="counter">2536</h2>
+                                                <p class="text-uppercase">Patients Records</p>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6 single-fact">
+                                                <h2 class="counter">6784</h2>
+                                                <p class="text-uppercase">X-rays Done</p>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6 single-fact">
+                                                <h2 class="counter">100059</h2>
+                                                <p class="text-uppercase">Blood test Done</p>
+                                        </div>
+                                        <div class="col-lg-3 col-md-6 single-fact">
+                                                <h2 class="counter">2239</h2>
+                                                <p class="text-uppercase">Lives Saved</p>
+                                        </div>
+                                </div>
+                        </div>
+                </section>
+                <!-- end fact Area -->
+
+                
+                <!-- start footer Area -->
+                <footer class="footer-area section-gap">
+                        <div class="container">
+                                <div class="row">
+                                        
+                                        <div class="col-lg-4  col-md-6">
+                                                <div class="single-footer-widget mail-chimp">
+                                                        <h6 class="mb-20">Contact Us</h6>
+                                                        <p>
+                                                                Quartier Sorge - Bâtiment Génopode - CH 1015 Lausanne - Switzerland
+                                                        </p>
+                                                        <h3>+41 21 692 42 92</h3>
+                                                </div>
+                                        </div>
+                                        <div class="col-lg-6  col-md-12">
+                                                <div class="single-footer-widget newsletter">
+                                                        <h6>Urgent Software assistance</h6>
+                                                        <p>You can send us an e-mail and the BlockChainH team will answer with 24 hours.</p>
+                                                        <div id="mc_embed_signup">
+                                                                <form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="form-inline">
+
+                                                                        <div class="form-group row" style="width: 100%">
+                                                                                <div class="col-lg-8 col-md-12">
+                                                                                        <input name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '" required="" type="email">
+                                                                                        <div style="position: absolute; left: -5000px;">
+                                                                                                <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+                                                                                        </div>
+                                                                                </div>
+
+                                                                                <div class="col-lg-4 col-md-12">
+                                                                                        <button class="nw-btn primary-btn">Urgent<span class="lnr lnr-arrow-right"></span></button>
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="info"></div>
+                                                                </form>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+
+                                <div class="row footer-bottom d-flex justify-content-between">
+                                        <p class="col-lg-8 col-sm-12 footer-text m-0">
+                                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                        </p>
+                                        <div class="col-lg-4 col-sm-12 footer-social">
+                                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                                <a href="#"><i class="fa fa-dribbble"></i></a>
+                                                <a href="#"><i class="fa fa-behance"></i></a>
+                                        </div>
+                                </div>
+                        </div>
+                </footer>
+                <!-- End footer Area -->
+
+                <script src="js/vendor/jquery-2.2.4.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+                <script src="js/vendor/bootstrap.min.js"></script>
+                <script src="js/jquery.ajaxchimp.min.js"></script>
+                <script src="js/jquery.nice-select.min.js"></script>
+                <script src="js/jquery.sticky.js"></script>
+                <script src="js/parallax.min.js"></script>
+                <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+                <script src="js/jquery.magnific-popup.min.js"></script>
+                <script src="js/waypoints.min.js"></script>
+                <script src="js/jquery.counterup.min.js"></script>
+                <script src="js/main.js"></script>
+                <script src="https://cdn.rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>
+                <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+                <script src="https://unpkg.com/ipfs/dist/index.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/ipfs/dist/index.js"></script>
+                <script src="https://unpkg.com/ipfs/dist/index.js"></script>
+                <script src="./index.js"></script>
+        </body>
+</html>
